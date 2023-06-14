@@ -83,8 +83,8 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.glsl$/,
-                loader: 'webpack-glsl'
+                test: /\.wgsl$/i,
+                type: 'asset/source',
             }
         ],
     },
@@ -95,4 +95,7 @@ module.exports = {
             '@': path.resolve(__dirname, 'src'),
         }
     },
+    experiments: {
+        topLevelAwait: true
+    }
 };
